@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Title</title>
+		<style>
+			textarea{
+				width: 400px;
+				height: 200px;
+				resize: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<textarea name="" id="tex" cols="30" rows="10"></textarea>
+		<button id="btn">提交</button>
+
+		<script>
+			tex.onkeyup = function() {
+				if(tex.value.length < 60) {
+					btn.onclick = function() {
+						alert('提交成功')
+					}
+				} else {
+					btn.disabled = 'false'
+				}
+
+			}
+		</script>
+	</body>
+
+</html>
